@@ -7,7 +7,7 @@ MAINTAINER Guille Deprati <gdeprati@santandertecnologia.com.ar>
 RUN [ -e /etc/yum.conf ] && sed -i '/tsflags=nodocs/d' /etc/yum.conf || true
 
 # Reinstall all packages to get man pages for them
-RUN yum -y reinstall "*" && yum clean all
+#RUN yum -y reinstall "*" && yum clean all
 
 # Swap out the systemd-container package and install all useful packages
 RUN yum -y install \

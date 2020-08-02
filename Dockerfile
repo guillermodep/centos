@@ -12,7 +12,7 @@ RUN yum -y reinstall "*" && yum clean all
 # Swap out the systemd-container package and install all useful packages
 RUN yum -y install \
            kernel \
-           e2fsprogs \
+           e2fsprogs \  
            sos \
            crash \
            strace \
@@ -27,18 +27,14 @@ RUN yum -y install \
            btrfs-progs \
            ethtool \
            file \
-           findutils \
            gcc \
            gdb \
            git \
            glibc-common \
-           glibc-utils \
            hwloc \
            iotop \
            iproute \
-           iputils \
            less \
-           pciutils \
            ltrace \
            mailx \
            man-db \
@@ -63,7 +59,6 @@ RUN yum -y install \
            ostree \
            rpm-ostree \
            docker \
-           python-docker-py \
            docker-selinux \
            kubernetes-client \
            kubernetes-node \
@@ -73,9 +68,7 @@ RUN yum -y install \
            vim-minimal \
            bash-completion \
            subscription-manager \
-           python-rhsm \
            rootfiles \
-           yum-utils \
            && yum clean all
 
 # Set default command
